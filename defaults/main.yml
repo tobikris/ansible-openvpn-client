@@ -1,0 +1,15 @@
+openvpn_client_instances: []
+  # - name: domain
+  #   remote: domain.tld
+  #   port: 1194
+  #   interface: tun0
+  #   verify_remote: domain.tld
+  #   ca: |
+  #     -----BEGIN CERTIFICATE-----
+  #     -----END CERTIFICATE-----
+  #   cert:  |
+  #     -----BEGIN CERTIFICATE-----
+  #     -----END CERTIFICATE-----
+  #   key: |
+  #     -----BEGIN PRIVATE KEY-----
+  #     -----END PRIVATE KEY-----

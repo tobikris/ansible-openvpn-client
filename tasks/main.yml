@@ -1,0 +1,15 @@
+---
+- name: Install openvpn
+  package:
+    name: openvpn
+    state: latest
+  tags: openvpn,install
+
+- name: "Configure openvpn {{ item.name }}"
+  template:
+    src: openvpn-client-config.j2
+    dest: "/etc/openvpn/{{ item.name }}.conf"
+  notify: Restart openvpn
+  tags: openvpn,config
+  register: openvpn_client_conf_results
+  with_items: "{{ openvpn_client_instances }}"
